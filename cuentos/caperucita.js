@@ -130,8 +130,7 @@ registrarCuento({
             texto: [
                 "Caperucita prometió nunca volver a alejarse del camino.",
                 "Desde aquel día, recordó escuchar a su mamá y tener cuidado con los desconocidos.",
-                "Y así, Caperucita y su abuelita vivieron felices.",
-                "FIN"
+                "Y así, Caperucita y su abuelita vivieron felices."
             ],
             interacciones: {
                 "felices": { sonido: "felices.mp3", animacion: "luces" }
@@ -139,19 +138,3 @@ registrarCuento({
         }
     ]
 });
-
-/* ------------------------------------------------------------
-   Ajuste propio de este cuento (opcional).
-   ------------------------------------------------------------ */
-(function () {
-    var estilo = document.createElement("style");
-    estilo.textContent =
-        "@media (max-width: 400px) {" +
-        "  #pantalla-portada[data-cuento=\"caperucita\"] .titulo {" +
-        "    font-size: clamp(1.5rem, 7.6vw, 2.3rem);" +
-        "    letter-spacing: .1em;" +
-        "    padding-left: .1em;" +
-        "  }" +
-        "}";
-    document.head.appendChild(estilo);
-})();
