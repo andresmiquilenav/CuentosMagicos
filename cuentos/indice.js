@@ -15,6 +15,6 @@ window.INDICE_CUENTOS = [
     "rapunzel",
     "pinocho",
     "blancanieves",
-   "caperucita,
+   "caperucita",
    
 ];
