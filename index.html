@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3e9d2">
+  <title>Cuentos mágicos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,8 61,38 93,38 67,57 77,89 50,70 23,89 33,57 7,38 39,38' fill='%23b8934a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Volver a la biblioteca (solo visible dentro de un cuento) -->
+  <button id="volver" class="volver" type="button" data-accion="ir-biblioteca" hidden>← CUENTOS</button>
+
+  <!-- Control general de sonido (arriba a la derecha) -->
+  <button id="control-sonido" class="control-sonido" type="button">🔊 Sonidos</button>
+
+  <!--
+    Estructura base de la aplicación. Solo hay cuatro pantallas y se reutilizan
+    para todos los cuentos: script.js rellena la biblioteca, la portada y las
+    escenas con los datos de cuentos/<id>.js
+  -->
+  <main id="app">
+
+    <!-- PANTALLA 1 · PORTADA GENERAL -->
+    <section id="pantalla-inicio" class="pantalla libro portada" data-vista="inicio" tabindex="-1" aria-labelledby="titulo-inicio">
+      <div class="portada-contenido">
+
+        <svg class="emblema" viewBox="0 0 120 84" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M60 40 C48 32 30 31 14 36 V74 C30 69 48 70 60 77 C72 70 90 69 106 74 V36 C90 31 72 32 60 40 Z" fill="rgba(230,200,119,.28)"/>
+            <path d="M60 40 V77"/>
+          </g>
+          <g fill="currentColor">
+            <path d="M60 4 L62.5 12.5 L71 15 L62.5 17.5 L60 26 L57.5 17.5 L49 15 L57.5 12.5 Z"/>
+            <path d="M32 14 L33.6 19.4 L39 21 L33.6 22.6 L32 28 L30.4 22.6 L25 21 L30.4 19.4 Z"/>
+            <path d="M88 14 L89.6 19.4 L95 21 L89.6 22.6 L88 28 L86.4 22.6 L81 21 L86.4 19.4 Z"/>
+          </g>
+        </svg>
+
+        <h1 id="titulo-inicio" class="titulo titulo-doble"><span>CUENTOS</span><span>MÁGICOS</span></h1>
+        <p class="subtitulo">Historias que cobran vida cuando las tocas.</p>
+
+        <div class="adorno" aria-hidden="true"><i></i></div>
+
+        <button class="comenzar" type="button" data-accion="comenzar-app">COMENZAR</button>
+
+      </div>
+    </section>
+
+    <!-- PANTALLA 2 · BIBLIOTECA (las tarjetas las genera script.js) -->
+    <section id="pantalla-biblioteca" class="pantalla libro biblioteca" data-vista="biblioteca" tabindex="-1" aria-labelledby="titulo-biblioteca" hidden>
+
+      <h2 id="titulo-biblioteca" class="biblioteca-titulo">ELIGE UN CUENTO</h2>
+      <div class="adorno" aria-hidden="true"><i></i></div>
+
+      <div id="tarjetas" class="tarjetas">
+        <p class="biblioteca-estado">Cargando cuentos…</p>
+      </div>
+
+    </section>
+
+    <!-- PANTALLA 3 · PORTADA DEL CUENTO ELEGIDO (la rellena script.js) -->
+    <section id="pantalla-portada" class="pantalla libro portada" data-vista="portada" tabindex="-1" hidden>
+      <div id="portada-contenido" class="portada-contenido"></div>
+    </section>
+
+    <!-- PANTALLA 4 · LECTOR DE CUENTOS (escenas y navegación) -->
+    <article id="pantalla-cuento" class="pantalla libro cuento" data-vista="cuento" tabindex="-1" hidden>
+
+      <!-- luces flotantes de fondo (se activan con decoracion: "linternas") -->
+      <div id="cielo" class="cielo" aria-hidden="true"></div>
+
+      <div id="escenas" class="escenas"></div>
+
+      <nav class="navegacion" aria-label="Navegación del cuento">
+        <button type="button" class="nav-boton nav-anterior" data-accion="anterior">← ANTERIOR</button>
+        <div class="progreso">
+          <div id="progreso-puntos" class="progreso-puntos" aria-hidden="true"></div>
+          <p class="progreso-texto" aria-live="polite">
+            <span id="progreso-numero" class="progreso-numero"></span><span id="progreso-titulo" class="progreso-titulo"></span>
+          </p>
+        </div>
+        <button type="button" class="nav-boton nav-siguiente" data-accion="siguiente">SIGUIENTE →</button>
+      </nav>
+
+    </article>
+
+  </main>
+
+  <noscript>
+    <p class="aviso-noscript">Estos cuentos necesitan JavaScript para funcionar.</p>
+  </noscript>
+
+  <!-- 1) lista de cuentos  2) motor  (el motor carga cuentos/<id>.js por su cuenta) -->
+  <script src="cuentos/indice.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Autodiagnóstico: si esta página se abre fuera de la carpeta del proyecto
+       (sin style.css o sin script.js a su lado), lo dice en pantalla. Con todo en
+       su sitio no hace nada. -->
+  <script>
+    window.addEventListener("load", function () {
+      var faltan = [];
+      var marfil = getComputedStyle(document.documentElement).getPropertyValue("--marfil");
+      if (!marfil || !marfil.trim()) faltan.push("style.css");
+      if (typeof registrarCuento !== "function") faltan.push("script.js");
+      if (!faltan.length) return;
+
+      var caja = document.createElement("div");
+      caja.id = "diagnostico";
+      caja.style.cssText = "position:fixed;left:0;right:0;top:0;z-index:99999;padding:16px 20px;" +
+        "background:#fff3cd;color:#4a3000;border-bottom:3px solid #b8934a;" +
+        "font:16px/1.55 Georgia,'Times New Roman',serif;box-shadow:0 4px 18px rgba(0,0,0,.35)";
+
+      function linea(texto, negrita) {
+        var p = document.createElement(negrita ? "strong" : "span");
+        p.textContent = texto;
+        caja.appendChild(p);
+        caja.appendChild(document.createElement("br"));
+      }
+
+      linea("Esta página se abrió fuera de la carpeta del proyecto.", true);
+      linea("No se pudo cargar: " + faltan.join(" y ") + ".");
+      linea("Se está abriendo desde: " + location.href);
+      linea("Abre index.html desde la carpeta completa (la que contiene style.css, script.js, cuentos y sonidos). " +
+            "Si descargaste un .zip, extráelo primero por completo: abrir index.html desde dentro del zip no funciona.");
+      document.body.appendChild(caja);
+    });
+  </script>
+</body>
+</html>

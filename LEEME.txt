@@ -1,0 +1,18 @@
+CUENTOS MÁGICOS — cómo abrirlo
+==============================
+
+1) Extrae TODO el contenido de este .zip (clic derecho -> "Extraer todo").
+   No abras index.html desde dentro del zip: sin sus carpetas se ve como una
+   página sin diseño y no funciona nada.
+
+2) Abre la carpeta extraída "cuentos-magicos". Debe contener, juntos:
+      index.html
+      style.css
+      script.js
+      cuentos/      (indice.js, cenicienta.js, rapunzel.js, _plantilla.js)
+      sonidos/      (cenicienta/, rapunzel/  y, si lo tienes, pagina.mp3)
+
+3) Haz doble clic en index.html.
+
+Si algo falta, la propia página muestra un aviso arriba explicando qué archivo
+no se pudo cargar y desde qué carpeta se está abriendo.
