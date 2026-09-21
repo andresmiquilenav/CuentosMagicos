@@ -15,7 +15,7 @@ registrarCuento({
             id: "mision",
             titulo: "La misión",
             texto: [
-                "Había una vez una *niña* llamada Caperucita Roja. Un día, su *mamá* le pidió que llevara una canasta con *comida* a su abuelita, que estaba enferma."
+                "Había una vez una niña llamada Caperucita Roja. Un día, su mamá le pidió que llevara una canasta con comida a su abuelita, que estaba enferma."
             ],
             interacciones: {
                 "niña": { sonido: "niña.mp3", animacion: "destellos" },
@@ -27,7 +27,7 @@ registrarCuento({
             id: "bosque",
             titulo: "El bosque",
             texto: [
-                "Caperucita tomó la canasta y *caminó* feliz por el *bosque*. Mientras avanzaba, escuchaba a los *pájaros* cantar."
+                "Caperucita tomó la canasta y caminó feliz por el bosque. Mientras avanzaba, escuchaba a los pájaros cantar."
             ],
             interacciones: {
                 "caminó": { sonido: "caminó.mp3", animacion: "trote" },
@@ -39,7 +39,7 @@ registrarCuento({
             id: "lobo",
             titulo: "El lobo",
             texto: [
-                "De pronto, un *lobo* apareció entre los *árboles*.",
+                "De pronto, un lobo apareció entre los árboles.",
                 "—¿Adónde vas, Caperucita?",
                 "—A llevarle comida a mi abuelita."
             ],
@@ -52,9 +52,9 @@ registrarCuento({
             id: "flores",
             titulo: "Las flores",
             texto: [
-                "El lobo le señaló unas *flores*.",
+                "El lobo le señaló unas flores.",
                 "—¿Por qué no recoges algunas para tu abuelita?",
-                "Caperucita comenzó a *recogerlas* mientras el lobo se alejaba."
+                "Caperucita comenzó a recogerlas mientras el lobo se alejaba."
             ],
             interacciones: {
                 "flores": { sonido: "flores.mp3", animacion: "destellos" },
@@ -65,7 +65,7 @@ registrarCuento({
             id: "casa",
             titulo: "La casa",
             texto: [
-                "El lobo llegó primero a la *casa* de la abuelita. *Llamó* a la puerta y entró."
+                "El lobo llegó primero a la casa de la abuelita. Llamó a la puerta y entró."
             ],
             interacciones: {
                 "casa": { sonido: "casa.mp3", animacion: "misterio" },
@@ -76,7 +76,7 @@ registrarCuento({
             id: "disfraz",
             titulo: "El disfraz",
             texto: [
-                "El lobo se puso el *gorro* de la abuelita y se escondió en la *cama*.",
+                "El lobo se puso el gorro de la abuelita y se escondió en la cama.",
                 "Cuando Caperucita llegó, se acercó lentamente."
             ],
             interacciones: {
@@ -88,9 +88,9 @@ registrarCuento({
             id: "ojos",
             titulo: "Qué ojos tan grandes",
             texto: [
-                "—Abuelita, ¡qué *ojos* tan grandes tienes!",
+                "—Abuelita, ¡qué ojos tan grandes tienes!",
                 "—Son para verte mejor.",
-                "—¿Y qué *orejas* tan grandes tienes?",
+                "—¿Y qué orejas tan grandes tienes?",
                 "—Son para escucharte mejor."
             ],
             interacciones: {
@@ -103,9 +103,9 @@ registrarCuento({
             titulo: "Los dientes",
             texto: [
                 "Caperucita miró a su abuelita con atención.",
-                "—¿Y qué *dientes* tan grandes tienes?",
+                "—¿Y qué dientes tan grandes tienes?",
                 "—¡Son para comerte mejor!",
-                "Caperucita dio un gran *grito* y salió corriendo."
+                "Caperucita dio un gran grito y salió corriendo."
             ],
             interacciones: {
                 "dientes": { sonido: "dientes.mp3", animacion: "acero" },
@@ -116,8 +116,8 @@ registrarCuento({
             id: "lenador",
             titulo: "El leñador",
             texto: [
-                "Un *leñador* que estaba cerca escuchó los gritos y entró rápidamente.",
-                "El lobo huyó hacia el bosque, y Caperucita *abrazó* a su abuelita."
+                "Un leñador que estaba cerca escuchó los gritos y entró rápidamente.",
+                "El lobo huyó hacia el bosque, y Caperucita abrazó a su abuelita."
             ],
             interacciones: {
                 "leñador": { sonido: "leñador.mp3", animacion: "magia" },
@@ -130,7 +130,7 @@ registrarCuento({
             texto: [
                 "Caperucita prometió nunca volver a alejarse del camino.",
                 "Desde aquel día, recordó escuchar a su mamá y tener cuidado con los desconocidos.",
-                "Y así, Caperucita y su abuelita vivieron *felices*.",
+                "Y así, Caperucita y su abuelita vivieron felices.",
                 "FIN"
             ],
             interacciones: {
