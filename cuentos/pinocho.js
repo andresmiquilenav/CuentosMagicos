@@ -25,6 +25,25 @@ registrarCuento({
     titulo: "Pinocho",
     descripcion: "Una aventura de madera, sueños y verdad.",
 
+   /* Dibujo de la portada y de la tarjeta para Pinocho (interior de un SVG de 120 x 84) */
+    emblema: `
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+            <!-- Silueta de la ballena (Monstruo marino) -->
+            <path d="M15 60 C25 45, 45 45, 60 55 C75 45, 95 45, 105 60 C90 70, 30 70, 15 60 Z" fill="rgba(115,160,210,.25)"/>
+            <!-- Gorro de Pinocho con pluma -->
+            <path d="M45 35 L60 15 L75 35 Z" fill="rgba(220,90,90,.2)"/>
+            <path d="M60 22 Q75 18, 85 10 Q72 25, 60 28 Z" fill="currentColor"/>
+            <!-- La icónica nariz alargada -->
+            <path d="M55 33 L95 31 L55 35 Z" fill="rgba(230,200,119,.35)"/>
+        </g>
+        <g fill="currentColor">
+            <!-- Detalles de estrellas y la chispa de la Fada Madrina / conciencia -->
+            <circle cx="25" cy="20" r="2.5"/>
+            <path d="M98 15 L100 20 L105 22 L100 24 L98 29 L96 24 L91 22 L96 20 Z"/>
+            <circle cx="95" cy="55" r="1.5"/>
+            <circle cx="25" cy="55" r="1.5"/>
+        </g>`,
+
     escenas: [
         {
             id: "gepetto",
