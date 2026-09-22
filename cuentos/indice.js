@@ -16,5 +16,6 @@ window.INDICE_CUENTOS = [
     "pinocho",
     "blancanieves",
    "caperucita",
+   "sirenita",
    
 ];
