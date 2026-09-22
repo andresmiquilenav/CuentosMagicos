@@ -9,26 +9,27 @@ registrarCuento({
     descripcion: "Un mar profundo, una bruja y un gran amor.",
     icono: "🧜‍♀️",
     colores: { cubierta: ["#1a4b6c", "#0d2538"] },
- /* Dibujo de la portada y de la tarjeta para La Sirenita - Minimalista (interior de un SVG de 120 x 84) */
+/* Dibujo de la portada y de la tarjeta para La Sirenita (según tu imagen image_1.png), interior de un SVG de 120 x 84 */
     emblema: `
         <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-            <!-- La Luna o el Sol en el horizonte (círculo superior) -->
-            <circle cx="95" cy="25" r="12" fill="rgba(255,255,255,.1)"/>
+            <!-- La Luna o el Sol en el horizonte (círculo superior derecho) -->
+            <circle cx="88" cy="24" r="12" fill="rgba(230,200,119,.15)"/>
             
-            <!-- La Roca sobre la que se sienta (trazo base inferior) -->
-            <path d="M20 78 Q 40 65, 60 78 T 100 78" stroke-width="3"/>
+            <!-- La ola base sobre la que se sienta (trazo inferior ondulado) -->
+            <path d="M25 73 Q 40 60, 55 73 T 85 73"/>
             
-            <!-- Silueta de la Sirenita (cabeza, torso y cola curvada) -->
-            <!-- Se sienta en el centro de la roca (aprox. X=60) -->
-            <path d="M50 68 C 48 50, 55 35, 60 35 C 65 35, 72 50, 70 68 Z" fill="rgba(173,216,230,.35)"/>
+            <!-- Silueta de la Sirenita (cabeza, torso y cola) -->
+            <!-- Se sienta sobre el pico de la ola, aprox. X=40 -->
+            <!-- El cuerpo principal -->
+            <path d="M38 65 C 35 52, 40 38, 48 38 C 56 38, 61 52, 58 65 Z" fill="rgba(230,200,119,.28)"/>
             <!-- La cola extendida hacia la izquierda -->
-            <path d="M50 68 C 35 68, 30 85, 45 75 Q 50 72, 55 75 Z" fill="rgba(173,216,230,.2)" transform="rotate(-10 50 68)"/>
+            <path d="M48 61 Q 38 75, 25 65 T 48 61" fill="rgba(230,200,119,.15)"/>
         </g>
         <g fill="currentColor">
             <!-- Pequeño detalle de cabello o corona en la cabeza -->
-            <circle cx="60" cy="32" r="2.5"/>
+            <circle cx="48" cy="35" r="3"/>
             <!-- Una única burbuja subiendo -->
-            <circle cx="80" cy="55" r="1.5"/>
+            <circle cx="70" cy="60" r="1.8"/>
         </g>`,
     escenas: [
         {
