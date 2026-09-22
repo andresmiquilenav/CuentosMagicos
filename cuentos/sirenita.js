@@ -9,8 +9,6 @@ registrarCuento({
     descripcion: "Un mar profundo, una bruja y un gran amor.",
     icono: "🧜‍♀️",
     colores: { cubierta: ["#1a4b6c", "#0d2538"] },
-/* Dibujo de la portada y de la tarjeta para La Sirenita
-   (interior de un SVG de 120 x 84) */
 emblema: `
     <g fill="none" stroke="currentColor" stroke-width="2"
        stroke-linejoin="round" stroke-linecap="round">
@@ -18,54 +16,51 @@ emblema: `
         <!-- Ola -->
         <path d="M10 76 Q25 66 40 76 T70 76 T100 76 T110 76"/>
 
-        <!-- Cuerpo de la sirenita -->
-        <path d="M57 48
-                 C52 43 52 35 58 31
-                 C64 27 70 31 70 38
-                 C70 43 67 47 64 50
-                 L68 61
-                 C64 65 57 65 53 61
+        <!-- Cabeza y cuerpo -->
+        <circle cx="60" cy="27" r="8"
+                fill="rgba(230,200,119,.28)"/>
+
+        <path d="M54 34
+                 C51 40 52 49 58 55
+                 L63 55
+                 C68 48 69 40 66 34
+                 Z"
+              fill="rgba(230,200,119,.28)"/>
+
+        <!-- Cabello -->
+        <path d="M53 29
+                 C46 25 48 17 56 15
+                 C65 13 71 19 68 27
+                 C65 23 61 23 57 25
                  Z"
               fill="rgba(230,200,119,.28)"/>
 
         <!-- Cola -->
-        <path d="M63 57
-                 C55 60 48 66 40 69
-                 C35 71 30 68 28 64
-                 C35 66 41 63 46 58
-                 C51 53 57 52 63 57 Z"
+        <path d="M60 52
+                 C52 57 45 63 37 67
+                 C33 69 29 67 26 64
+                 C33 65 39 61 44 56
+                 C49 51 55 49 60 52 Z"
               fill="rgba(230,200,119,.22)"/>
 
-        <!-- Aleta de la cola -->
-        <path d="M40 69
-                 C34 68 28 70 23 75
-                 C30 76 36 75 40 69 Z"
-              fill="rgba(230,200,119,.28)"/>
-
-        <!-- Cabello -->
-        <path d="M56 34
-                 C49 30 49 22 56 18
-                 C64 14 72 19 72 27
-                 C72 32 69 35 65 37
-                 C63 32 60 31 56 34 Z"
+        <!-- Aleta -->
+        <path d="M37 67
+                 C31 67 25 70 21 75
+                 C29 75 34 73 37 67 Z"
               fill="rgba(230,200,119,.28)"/>
 
         <!-- Brazo -->
-        <path d="M67 43 Q75 50 78 57"/>
+        <path d="M65 39 Q72 46 75 52"/>
 
         <!-- Sol -->
-        <circle cx="94" cy="20" r="9"
+        <circle cx="94" cy="21" r="8"
                 fill="rgba(230,200,119,.18)"/>
     </g>
 
     <g fill="currentColor">
-        <!-- Ojo -->
-        <circle cx="65" cy="27" r="1.5"/>
-
-        <!-- Burbujas -->
-        <circle cx="80" cy="31" r="1.8"/>
-        <circle cx="87" cy="24" r="1.2"/>
-        <circle cx="83" cy="17" r="1"/>
+        <circle cx="63" cy="25" r="1.5"/>
+        <circle cx="82" cy="28" r="1.7"/>
+        <circle cx="88" cy="20" r="1.1"/>
     </g>`,
     escenas: [
         {
