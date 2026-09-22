@@ -18,5 +18,6 @@ window.INDICE_CUENTOS = [
    "caperucita",
    "sirenita",
    "tio-tigre-y-tio-conejo",
+   "las-conejitas",
    
 ];
