@@ -80,7 +80,6 @@ registrarCuento({
                 "Cuando Caperucita llegó, se acercó lentamente."
             ],
             interacciones: {
-                "gorro": { sonido: "gorro.mp3", animacion: "acero" },
                 "cama": { sonido: "cama.mp3", animacion: "ondear" }
             }
         },
@@ -94,8 +93,7 @@ registrarCuento({
                 "—Son para escucharte mejor."
             ],
             interacciones: {
-                "ojos": { sonido: "ojos.mp3", animacion: "destellos" },
-                "orejas": { sonido: "orejas.mp3", animacion: "campana" }
+              
             }
         },
         {
@@ -108,7 +106,7 @@ registrarCuento({
                 "Caperucita dio un gran grito y salió corriendo."
             ],
             interacciones: {
-                "dientes": { sonido: "dientes.mp3", animacion: "acero" },
+               
                 "grito": { sonido: "grito.mp3", animacion: "vibrar" }
             }
         },
