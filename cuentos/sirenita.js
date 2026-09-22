@@ -9,58 +9,33 @@ registrarCuento({
     descripcion: "Un mar profundo, una bruja y un gran amor.",
     icono: "🧜‍♀️",
     colores: { cubierta: ["#1a4b6c", "#0d2538"] },
+/* Concha marina para La Sirenita
+   (interior de un SVG de 120 x 84) */
 emblema: `
-    <g fill="none" stroke="currentColor" stroke-width="2"
-       stroke-linejoin="round" stroke-linecap="round">
+    <g fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round">
 
-        <!-- Ola -->
-        <path d="M10 76 Q25 66 40 76 T70 76 T100 76 T110 76"/>
+        <!-- Contorno de la concha -->
+        <path d="
+            M28 66
+            C29 43 40 24 60 18
+            C80 24 91 43 92 66
+            C76 60 44 60 28 66
+            Z"
+            fill="rgba(230,200,119,.28)"/>
 
-        <!-- Cabeza y cuerpo -->
-        <circle cx="60" cy="27" r="8"
-                fill="rgba(230,200,119,.28)"/>
+        <!-- Líneas principales de la concha -->
+        <path d="M60 18 V63"/>
+        <path d="M60 63 C52 45 45 31 40 27"/>
+        <path d="M60 63 C68 45 75 31 80 27"/>
+        <path d="M60 63 C48 51 38 43 33 42"/>
+        <path d="M60 63 C72 51 82 43 87 42"/>
 
-        <path d="M54 34
-                 C51 40 52 49 58 55
-                 L63 55
-                 C68 48 69 40 66 34
-                 Z"
-              fill="rgba(230,200,119,.28)"/>
-
-        <!-- Cabello -->
-        <path d="M53 29
-                 C46 25 48 17 56 15
-                 C65 13 71 19 68 27
-                 C65 23 61 23 57 25
-                 Z"
-              fill="rgba(230,200,119,.28)"/>
-
-        <!-- Cola -->
-        <path d="M60 52
-                 C52 57 45 63 37 67
-                 C33 69 29 67 26 64
-                 C33 65 39 61 44 56
-                 C49 51 55 49 60 52 Z"
-              fill="rgba(230,200,119,.22)"/>
-
-        <!-- Aleta -->
-        <path d="M37 67
-                 C31 67 25 70 21 75
-                 C29 75 34 73 37 67 Z"
-              fill="rgba(230,200,119,.28)"/>
-
-        <!-- Brazo -->
-        <path d="M65 39 Q72 46 75 52"/>
-
-        <!-- Sol -->
-        <circle cx="94" cy="21" r="8"
-                fill="rgba(230,200,119,.18)"/>
-    </g>
-
-    <g fill="currentColor">
-        <circle cx="63" cy="25" r="1.5"/>
-        <circle cx="82" cy="28" r="1.7"/>
-        <circle cx="88" cy="20" r="1.1"/>
+        <!-- Base -->
+        <path d="M28 66 Q60 57 92 66"/>
     </g>`,
     escenas: [
         {
