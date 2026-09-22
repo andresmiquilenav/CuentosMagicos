@@ -9,23 +9,26 @@ registrarCuento({
     descripcion: "Un mar profundo, una bruja y un gran amor.",
     icono: "🧜‍♀️",
     colores: { cubierta: ["#1a4b6c", "#0d2538"] },
-   /* Dibujo de la portada y de la tarjeta para La Sirenita (interior de un SVG de 120 x 84) */
+  /* Dibujo de la portada y de la tarjeta para La Sirenita (interior de un SVG de 120 x 84) */
     emblema: `
         <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-            <!-- Silueta de la Sirenita (cuerpo y cola curvada) -->
-            <path d="M30 75 Q 20 55, 35 30 C 50 10, 70 10, 85 30 Q 105 55, 95 75 Z" fill="rgba(173,216,230,.25)"/>
-            <!-- Concha marina decorativa (en el cabello o como marco) -->
-            <path d="M55 20 C 48 12, 72 12, 65 20 Q 65 26, 70 26 C 78 26, 78 14, 70 14 Q 60 14, 50 14 C 42 14, 42 26, 50 26 Q 55 26, 55 20 Z" fill="rgba(255,192,203,.2)"/>
-            <!-- Olas estilizadas/Corriente de agua -->
-            <path d="M10 80 C 30 65, 50 65, 60 80 S 90 95, 110 80"/>
+            <!-- Concha marina principal centrada -->
+            <path d="M60 16 C 45 16, 35 30, 45 45 C 50 52, 60 55, 60 55 C 60 55, 70 52, 75 45 C 85 30, 75 16, 60 16 Z" fill="rgba(255,192,203,.28)"/>
+            <!-- Nervios o líneas de la concha -->
+            <path d="M60 55 L 60 16"/>
+            <path d="M60 55 L 45 25"/>
+            <path d="M60 55 L 75 25"/>
+            <!-- Olas del mar en la parte inferior -->
+            <path d="M20 68 Q 35 60, 50 68 T 80 68 T 110 68"/>
+            <path d="M15 75 Q 30 67, 45 75 T 75 75 T 105 75"/>
         </g>
         <g fill="currentColor">
-            <!-- Burbujas / Estrellas de mar -->
-            <circle cx="80" cy="20" r="2"/>
-            <circle cx="20" cy="40" r="1.5"/>
-            <circle cx="90" cy="50" r="1.5"/>
-            <!-- Pequeña estrella de mar decorativa -->
-            <path d="M40 68 L 42 73 L 47 73 L 43 76 L 45 81 L 40 78 L 35 81 L 37 76 L 33 73 L 38 73 Z"/>
+            <!-- Burbujas ascendentes -->
+            <circle cx="35" cy="35" r="2.5"/>
+            <circle cx="30" cy="25" r="1.5"/>
+            <circle cx="85" cy="35" r="2.5"/>
+            <circle cx="90" cy="25" r="1.5"/>
+            <circle cx="60" cy="8" r="2"/>
         </g>`,
 
     escenas: [
